@@ -12,3 +12,11 @@ eTIV= st.slider('eTIV (Brain Volume)', min_value=1000, max_value=2500, value=160
 nWBV= st.slider('nWBV (Normalized Brain Volume)', min_value=0.6, max_value=0.9, value=0.72)
 ASF=st.slider('ASF (Atlas Scaling Factor', min_value=0.8, max_value=1.5, value=1.0)
 sex = st.selectbox('Sex', options=[1, 0], format_func=lambda x: 'Male' if x == 1 else 'Female')
+
+if st.button('Predict'):
+  prediction=model.predict([[sex, age, EDUC, SES, MMSE, eTIV, nWBV, ASF]])
+  
+  if prediction[0] == 1:
+    st.error('⚠️ Dementia Detected')
+  else:
+    st.success('✅ No Dementia Detected')
