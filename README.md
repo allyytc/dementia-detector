@@ -2,7 +2,7 @@
 
 A machine learning web app that predicts dementia risk from clinical patient measurements, built with Python and deployed with Streamlit.
 
-🔗 **[Try the Live App]((https://allyytc-dementia-detector.streamlit.app/))**
+🔗 **[Try the Live App](https://allyytc-dementia-detector.streamlit.app/)**
 
 ---
 
